@@ -1,0 +1,58 @@
+/* body */
+body {
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+/* none */
+.list,
+.site-nav,
+.auth-nav,
+.contacts,
+.feature-list,
+.works-list,
+.team-list,
+.projects-list,
+.buttons,
+p,
+ul,
+h1,
+h2,
+h3,
+pre,
+a {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1200px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

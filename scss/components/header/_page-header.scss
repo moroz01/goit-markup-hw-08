@@ -1,0 +1,15 @@
+/* Header */
+.page-header {
+  border-bottom: 1px solid $header-border-color;
+  display: block;
+}
+
+.page-header__item {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
