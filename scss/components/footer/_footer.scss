@@ -7,10 +7,17 @@
 }
 
 .page-footer__item {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
-
 .logo--light {
   color: $primary-white-color;
   font-family: Raleway, sans-serif;
