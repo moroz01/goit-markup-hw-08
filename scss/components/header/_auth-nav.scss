@@ -1,21 +1,38 @@
 .auth-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    // align-items: center;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
+// .auth-nav__item {
+//   :first-child {
+//     margin-bottom: 10px;
+//   }
+// }
+
 .auth-nav__item:not(:first-child) {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
 }
 
 .auth-nav__link {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   // padding-top: 32px;
   // padding-bottom: 32px;
+  margin-left: auto;
 
   color: $primary-text-color;
   font-style: normal;
@@ -35,6 +52,7 @@
 
 .auth-nav__icon {
   margin-right: 10px;
+
   fill: $primary-text-color;
 
   .auth-nav__link:hover &,
