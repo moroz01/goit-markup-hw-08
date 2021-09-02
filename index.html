@@ -23,7 +23,13 @@
         <div class="container page-header__item">
           <nav class="main-nav">
             <a href="#" class="logo"><span class="logo__accent">Web</span>Studio</a>
-            <button type="button" class="menu-button is-open" data-menu-button>
+            <button
+              type="button"
+              class="menu-button is-open"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
               <svg
                 width="40"
                 height="40"
@@ -408,7 +414,7 @@
           </ul>
         </div>
         <div class="joinus">
-          <p class="joinus__p">Подпишитесь на рассылку</p>
+          <p class="joinus__p toemail">Подпишитесь на рассылку</p>
 
           <form class="tosign">
             <input type="email" class="tosign__email" name="mail" placeholder="E-mail" />

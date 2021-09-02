@@ -412,14 +412,15 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 400px;
-    background-color: lemonchiffon;
-    padding: 20px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 48px 40px;
     text-align: center;
     font-size: 20px;
   }
   .menu-container.is-open {
     display: block;
+    z-index: 100;
   }
 }
 
@@ -495,6 +496,12 @@ img {
   width: 100%;
   height: 4px;
   border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__link--current::after {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -795,9 +802,14 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (max-width: 767px) {
-  .team-list__item:not(last-child) {
-    margin-bottom: 30px;
+.team-list__item:not(last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .team-list__item {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
   }
 }
 
@@ -865,18 +877,28 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: -30px;
 }
 
-.customers-list__item {
-  -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
-      flex-basis: calc((100% - 2 * 30px) / 2);
+@media screen and (max-width: 767px) {
+  .customers-list__item {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .customers-list__item {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
+        flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .customers-list__link {
-  width: 100%;
+  width: 170px;
   height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -887,12 +909,18 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 15px;
-  margin-bottom: 30px;
   color: #afb1b8;
   background-color: #ffffff;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .customers-list__link {
+    width: 100%;
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
 }
 
 .customers-list__link:hover, .customers-list__link:focus {
@@ -928,9 +956,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -982,6 +1009,12 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 786px) {
+  .joinus {
+    margin-top: 0;
+  }
+}
+
 .joinus__p {
   font-size: 14px;
   font-weight: 700;
@@ -989,6 +1022,18 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .joinus__p {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .joinus__p.toemail {
+    margin-top: 60px;
+  }
 }
 
 /* Footer Social */
@@ -1043,6 +1088,14 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .tosign {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .tosign__email {
   max-width: 480px;
   width: 100%;
@@ -1054,6 +1107,26 @@ img {
   color: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .tosign__email {
+    min-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tosign__email {
+    min-width: 480px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tosign__email {
+    min-width: 368px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .tosign__button-primary {
