@@ -9,6 +9,9 @@
 
   opacity: 1;
   transition: opacity 250ms $timing-function;
+  overflow-y: scroll;
+
+  padding: 15px;
 }
 
 .backdrop.is-hidden {
@@ -21,18 +24,26 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: block;
+  position: relative;
 
-  min-width: 528px;
-  min-height: 581px;
   background-color: $primary-white-color;
   box-shadow: $card-shadow;
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $timing-function;
+
+  @media screen and (min-width: 480px) {
+    transform: translate(-50%, -50%) scale(1);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+
+    width: 100% max-width 450px;
+    height: 610px;
+  }
 }
 
 .modal__close {
@@ -55,4 +66,8 @@
     fill: $modal-border-color;
     outline: none;
   }
+}
+
+.submit {
+  text-align: center;
 }

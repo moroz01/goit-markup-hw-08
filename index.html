@@ -23,6 +23,19 @@
         <div class="container page-header__item">
           <nav class="main-nav">
             <a href="#" class="logo"><span class="logo__accent">Web</span>Studio</a>
+            <button type="button" class="menu-button is-open" data-menu-button>
+              <svg
+                width="40"
+                height="40"
+                aria-expanded="false"
+                aria-label="Переключатель мобильного меню"
+                aria-controls="menu-container"
+              >
+                <use class="menu-button__menu" href="./images/icons.svg#menu"></use>
+                <use class="menu-button__cross" href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>Контент меню</div>
             <ul class="site-nav">
               <li class="site-nav__item">
                 <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
@@ -59,7 +72,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">
-            ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />
+            ЭФФЕКТ ИВНЫЕ РЕШЕНИЯ<br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
           <button type="button" class="button-primary hero__button-primary" data-modal-open>
@@ -418,8 +431,8 @@
           </svg>
         </button>
 
-        <form class="js-speaker-form form">
-          <div role="group" class="form__group">
+        <form class="form js-speaker-form">
+          <div class="form__group">
             <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
 
             <div class="form-field">
@@ -475,5 +488,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

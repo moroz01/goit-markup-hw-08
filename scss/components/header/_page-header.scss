@@ -2,6 +2,7 @@
 .page-header {
   border-bottom: 1px solid $header-border-color;
   display: block;
+  position: relative;
 }
 
 .page-header__item {
@@ -12,4 +13,23 @@
 .main-nav {
   display: flex;
   align-items: center;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  &.is-open .menu-button__cross {
+    display: block;
+  }
+
+  &.is-open .menu-button__menu {
+    display: none;
+  }
+}
+
+.menu-button__cross {
+  display: none;
 }

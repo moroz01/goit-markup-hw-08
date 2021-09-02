@@ -25,6 +25,7 @@
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 /* адрес */
@@ -62,6 +63,8 @@
 /* Joinus */
 .joinus {
   display: block;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .joinus__p {
@@ -78,10 +81,14 @@
 .footer-social {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 206px;
+  justify-content: center;
+  // width: 206px;
   height: 44px;
   margin-top: 20px;
+}
+
+.footer-social__item {
+  margin-right: 10px;
 }
 
 .footer-social__link {
@@ -108,21 +115,23 @@
 }
 
 .tosign {
-  display: flex;
+  display: block;
   border: none;
+  text-align: center;
 }
 
 .tosign__email {
-  min-width: 358px;
+  max-width: 480px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
+  margin-bottom: 20px;
 
   background-color: $secondary-bg-color;
   color: $border-footer-color;
   border: 1px solid $border-footer-color;
   border-radius: 4px;
-  margin-right: 12px;
 }
 
 .tosign__button-primary {
@@ -130,6 +139,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover,
   &:focus {
