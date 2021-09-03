@@ -1,0 +1,36 @@
+.social-list__mobile-menu {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.social-list__item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.social-list__item:not(:last-child)::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  margin-left: 10px;
+  width: 1px;
+  height: 100%;
+  background-color: #757575;
+  color: #757575;
+}
+
+.social-list__link {
+  color: $accent-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}

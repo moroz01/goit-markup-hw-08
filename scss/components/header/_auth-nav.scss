@@ -14,12 +14,6 @@
   }
 }
 
-// .auth-nav__item {
-//   :first-child {
-//     margin-bottom: 10px;
-//   }
-// }
-
 .auth-nav__item:not(:first-child) {
   @media screen and (min-width: 1200px) {
     margin-left: 50px;
@@ -44,9 +38,30 @@
 
   transition: color 250ms $timing-function;
 
-  &:hover,
-  &:focus {
+  @media screen and (min-width: 768px) {
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.auth-nav__link.mailto {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    bottom: 134px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+.auth-nav__link.telto {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    bottom: 194px;
     color: $accent-color;
+    font-size: 34px;
+    line-height: 1.17;
   }
 }
 
@@ -54,6 +69,9 @@
   margin-right: 10px;
 
   fill: $primary-text-color;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   .auth-nav__link:hover &,
   .auth-nav__link:focus & {

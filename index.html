@@ -25,23 +25,34 @@
             <a href="#" class="logo"><span class="logo__accent">Web</span>Studio</a>
             <button
               type="button"
-              class="menu-button is-open"
+              class="menu-toggle js-open-menu"
               aria-expanded="false"
               aria-controls="menu-container"
-              data-menu-button
             >
               <svg
                 width="40"
                 height="40"
                 aria-expanded="false"
                 aria-label="Переключатель мобильного меню"
-                aria-controls="menu-container"
+                aria-controls="mobile-menu"
               >
                 <use class="menu-button__menu" href="./images/icons.svg#menu"></use>
                 <use class="menu-button__cross" href="./images/icons.svg#close"></use>
               </svg>
             </button>
-            <div class="menu-container" id="menu-container" data-menu>
+            <div class="menu-container js-menu-container" id="mobile-menu">
+              <button class="menu-toggles js-close-menu">
+                <svg
+                  width="40"
+                  height="40"
+                  aria-expanded="false"
+                  aria-label="Закрыватель мобильного меню"
+                  aria-controls="close-menu"
+                >
+                  <use class="close-menu__cross" href="./images/icons.svg#close"></use>
+                </svg>
+              </button>
+               
               <ul class="site-nav">
                 <li class="site-nav__item">
                   <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
@@ -53,10 +64,10 @@
                   <a href="#footer" class="site-nav__link">Контакты</a>
                 </li>
               </ul>
-
+              
               <ul class="auth-nav">
                 <li class="auth-nav__item">
-                  <a href="mailto:info@devstudio.com" class="auth-nav__link">
+                  <a href="mailto:info@devstudio.com" class="auth-nav__link mailto">
                     <svg class="auth-nav__icon" width="16" height="12">
                       <use href="./images/sprite1.svg#envelope"></use>
                     </svg>
@@ -64,7 +75,7 @@
                   >
                 </li>
                 <li class="auth-nav__item">
-                  <a href="tel:+380961111111" class="auth-nav__link"
+                  <a href="tel:+380961111111" class="auth-nav__link telto"
                     ><svg class="auth-nav__icon" width="10" height="16">
                       <use href="./images/sprite1.svg#phone"></use>
                     </svg>
@@ -72,7 +83,13 @@
                   >
                 </li>
               </ul>
+             <ul class="social-list__mobile-menu">
+                <li class="social-list__item"><a href="#" class="social-list__link">Instagram</a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link">Twitter</a></li>
+               <li class="social-list__item"><a href="#" class="social-list__link">Facebook</a></li>
+              <li class="social-list__item"><a href="#" class="social-list__link">Linkedin</a></li>
             </div>
+            
           </nav>
         </div>
       </header>
@@ -81,7 +98,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">
-            ЭФФЕКТ ИВНЫЕ РЕШЕНИЯ<br />
+            ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
           <button type="button" class="button-primary hero__button-primary" data-modal-open>
@@ -173,7 +190,7 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img src="./images/team1.jpg" alt="Игорь Демьяненко" width="270" />
+              <img src="./images/team1.jpg" alt="Игорь Демьяненко" width="100%" />
               <p class="team-list__title">Игорь Демьяненко</p>
               <span class="team-list__text">Product Designer</span>
               <ul class="team-social">
@@ -208,7 +225,7 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/team2.jpg" alt="Ольга Репина" width="270" />
+              <img src="./images/team2.jpg" alt="Ольга Репина" width="100%" />
               <p class="team-list__title">Ольга Репина</p>
               <span class="team-list__text">Frontend Developer</span>
               <ul class="team-social">
@@ -243,7 +260,7 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/team3.jpg" alt="Николай Тарасов" width="270" />
+              <img src="./images/team3.jpg" alt="Николай Тарасов" width="100%" />
               <p class="team-list__title">Николай Тарасов</p>
               <span class="team-list__text">Marketing</span>
               <ul class="team-social">
@@ -278,7 +295,7 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/team4.jpg" alt="Михаил Ермаков" width="270" />
+              <img src="./images/team4.jpg" alt="Михаил Ермаков" width="100%" />
               <p class="team-list__title">Михаил Ермаков</p>
               <span class="team-list__text">UI Designer</span>
               <ul class="team-social">
@@ -497,6 +514,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script defer src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,5 +1,9 @@
 /* site-nav */
 .site-nav {
+  @media screen and (max-width: 767px) {
+    text-align: left;
+    margin-left: 0;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     /* margin-top: 32px;
@@ -9,7 +13,9 @@
 }
 
 .site-nav__item:not(:first-child) {
-  margin-left: 50px;
+  @media screen and (min-width: 768px) {
+    margin-left: 50px;
+  }
 }
 
 .site-nav__link {
@@ -24,6 +30,11 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+    font-size: 40px;
+    line-height: 1.17;
+  }
 
   transition: color 250ms $timing-function;
 
@@ -43,6 +54,11 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+    font-size: 40px;
+    line-height: 1.17;
+  }
 }
 
 .site-nav__link--current::after {
