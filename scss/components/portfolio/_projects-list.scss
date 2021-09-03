@@ -17,7 +17,12 @@
 
 .projects-list__item {
   border: 1px solid $portfolio-border-color;
-  @media screen and (min-width: 767px) {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - #{$card-set-gap});
     margin-left: $card-set-gap;
     margin-top: $card-set-gap;
@@ -47,6 +52,7 @@
 .projects-list__pic {
   margin: 0;
   width: 100%;
+  object-fit: cover;
 }
 
 .projects-overlay {

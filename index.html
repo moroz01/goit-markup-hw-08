@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -52,7 +53,7 @@
                   <use class="close-menu__cross" href="./images/icons.svg#close"></use>
                 </svg>
               </button>
-               
+
               <ul class="site-nav">
                 <li class="site-nav__item">
                   <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
@@ -64,7 +65,7 @@
                   <a href="#footer" class="site-nav__link">Контакты</a>
                 </li>
               </ul>
-              
+
               <ul class="auth-nav">
                 <li class="auth-nav__item">
                   <a href="mailto:info@devstudio.com" class="auth-nav__link mailto">
@@ -83,13 +84,19 @@
                   >
                 </li>
               </ul>
-             <ul class="social-list__mobile-menu">
-                <li class="social-list__item"><a href="#" class="social-list__link">Instagram</a></li>
+              <ul class="social-list__mobile-menu">
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">Instagram</a>
+                </li>
                 <li class="social-list__item"><a href="#" class="social-list__link">Twitter</a></li>
-               <li class="social-list__item"><a href="#" class="social-list__link">Facebook</a></li>
-              <li class="social-list__item"><a href="#" class="social-list__link">Linkedin</a></li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">Facebook</a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">Linkedin</a>
+                </li>
+              </ul>
             </div>
-            
           </nav>
         </div>
       </header>
@@ -164,19 +171,34 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="works-list">
             <li class="works-list__item">
-              <img src="./images/pic1.jpg" alt="Пример работ1" width="370" />
+              <img
+                srcset="./images/works/works1.jpg 1x, ./images/works/works1_2x.jpg 2x"
+                src="./images/works/works1.jpg"
+                alt="Пример работ1"
+                width="370"
+              />
               <div class="works-list__overlay">
                 <p class="works-list__text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
               </div>
             </li>
             <li class="works-list__item">
-              <img src="./images/pic2.jpg" alt="Пример работ2" width="370" />
+              <img
+                srcset="./images/works/works2.jpg 1x, ./images/works/works2_2x.jpg 2x"
+                src="./images/works/works2.jpg"
+                alt="Пример работ2"
+                width="370"
+              />
               <div class="works-list__overlay">
                 <p class="works-list__text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
               </div>
             </li>
             <li class="works-list__item">
-              <img src="./images/pic3.jpg" alt="Пример работ3" width="370" />
+              <img
+                srcset="./images/works/works3.jpg 1x, ./images/works/works3_2x.jpg 2x"
+                src="./images/works/works3.jpg"
+                alt="Пример работ3"
+                width="370"
+              />
               <div class="works-list__overlay">
                 <p class="works-list__text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
               </div>
@@ -190,7 +212,19 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img src="./images/team1.jpg" alt="Игорь Демьяненко" width="100%" />
+              <img
+                srcset="
+                  ./images/team/team1.jpg     480w,
+                  ./images/team/team1_2x.jpg  768w,
+                  ./images/team/team1_3x.jpg 1200w
+                "
+                src="./images/team/team1.jpg"
+                alt="Игорь Демьяненко"
+                width="100%"
+                sizes="(min-width:1200px) 25vw,
+               (min-width:768px) 50vw,
+               100vw"
+              />
               <p class="team-list__title">Игорь Демьяненко</p>
               <span class="team-list__text">Product Designer</span>
               <ul class="team-social">
@@ -225,7 +259,19 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/team2.jpg" alt="Ольга Репина" width="100%" />
+              <img
+                srcset="
+                  ./images/team/team2.jpg     480w,
+                  ./images/team/team2_2x.jpg  768w,
+                  ./images/team/team2_3x.jpg 1200w
+                "
+                src="./images/team/team2.jpg"
+                alt="Ольга Репина"
+                width="100%"
+                sizes="(min-width:1200px) 25vw,
+               (min-width:768px) 50vw,
+               100vw"
+              />
               <p class="team-list__title">Ольга Репина</p>
               <span class="team-list__text">Frontend Developer</span>
               <ul class="team-social">
@@ -260,7 +306,19 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/team3.jpg" alt="Николай Тарасов" width="100%" />
+              <img
+                srcset="
+                  ./images/team/team3.jpg     480w,
+                  ./images/team/team3_2x.jpg  768w,
+                  ./images/team/team3_3x.jpg 1200w
+                "
+                src="./images/team/team3.jpg"
+                alt="Николай Тарасов"
+                width="100%"
+                sizes="(min-width:1200px) 25vw,
+               (min-width:768px) 50vw,
+               100vw"
+              />
               <p class="team-list__title">Николай Тарасов</p>
               <span class="team-list__text">Marketing</span>
               <ul class="team-social">
@@ -295,7 +353,19 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/team4.jpg" alt="Михаил Ермаков" width="100%" />
+              <img
+                srcset="
+                  ./images/team/team4.jpg     480w,
+                  ./images/team/team4_2x.jpg  768w,
+                  ./images/team/team4_3x.jpg 1200w
+                "
+                src="./images/team/team4.jpg"
+                alt="Михаил Ермаков"
+                width="100%"
+                sizes="(min-width:1200px) 25vw,
+               (min-width:768px) 50vw,
+               100vw"
+              />
               <p class="team-list__title">Михаил Ермаков</p>
               <span class="team-list__text">UI Designer</span>
               <ul class="team-social">

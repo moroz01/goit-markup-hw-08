@@ -84,6 +84,7 @@
     &.is-open {
       display: block;
       z-index: 100;
+      min-height: 500px;
     }
   }
 }

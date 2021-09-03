@@ -449,6 +449,7 @@ img {
   .menu-container.is-open {
     display: block;
     z-index: 100;
+    min-height: 500px;
   }
 }
 
@@ -473,6 +474,7 @@ img {
   .site-nav {
     text-align: left;
     margin-left: 0;
+    margin-top: 0;
   }
 }
 
@@ -707,8 +709,15 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* button primary */
@@ -742,10 +751,44 @@ img {
   background-color: #2f303a;
   text-align: center;
   /* background-image: url('../images/header.jpg'); */
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_mobile_x2.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_mobile_x2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url '../images/hero/hero_mobile_x2.jpg';
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_tablet.jpg");
+  }
+}
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_tablet_x2.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_tablet_x2.jpg");
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_desktop.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_desktop.jpg");
+  }
+}
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_desktop_x2.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_desktop_x2.jpg");
+  }
 }
 
 .hero__title {
@@ -909,7 +952,6 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
   }
 }
 
@@ -1008,7 +1050,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: -30px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1046,7 +1087,6 @@ img {
 @media screen and (max-width: 1199px) {
   .customers-list__link {
     width: 100%;
-    margin-left: 15px;
     margin-bottom: 30px;
   }
 }
@@ -1309,6 +1349,7 @@ img {
 .modal {
   display: block;
   position: relative;
+  top: 14%;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1615,7 +1656,13 @@ img {
   border: 1px solid #eeeeee;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
+  .projects-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .projects-list__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
@@ -1650,6 +1697,8 @@ img {
 .projects-list__pic {
   margin: 0;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .projects-overlay {
